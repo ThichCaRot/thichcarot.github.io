@@ -1,11 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-between;
-    background-color: #f4efee;
+    background-color: white;
 }
 
 .header {
@@ -30,8 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
-    padding: 20px;
+    height: calc(100vh - 50px); /* Adjust based on header height */
 }
 
 .top-bar {
@@ -67,18 +62,76 @@ body {
 }
 
 .record {
-    background-color: #bd4f4c;
+    background-color: #ff4c4c;
     border: none;
     border-radius: 50%;
     width: 80px;
     height: 80px;
     font-size: 24px;
-    color: #f4efee;
-    padding: 16px;
+    color: white;
 }
 
-.wabisabi {
-    font-family: Aptos, sans-serif;
-    font-size: 60px;
-    color: #352a29;
+.recording-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.recording-container .timer {
+    font-size: 24px;
+    color: blue;
+}
+
+.recording-container .question {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.language-selector {
+    margin-bottom: 20px;
+}
+
+.language-selector select {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid blue;
+    background-color: white;
+    color: blue;
+}
+
+.pause-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pause-button .recording-time {
+    color: red;
+    font-size: 16px;
+}
+
+.pause-button .pause {
+    background-color: #cccccc;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    color: black;
 }
