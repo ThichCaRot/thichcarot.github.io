@@ -8,8 +8,9 @@
 </head>
 <body>
     <div class="recording-container">
-        <p class="timer">00:05</p>
-        <p class="question">What jobs are your friends doing now?</p>
+        <div id="transcript">
+            <!-- Dynamically added text entries will appear here -->
+        </div>
         <div class="language-selector">
             <select>
                 <option>English (US)</option>
@@ -24,6 +25,43 @@
             <span class="recording-time">00:02.7</span>
             <button class="pause">⏸</button>
         </div>
+        <div class="action-buttons">
+            <button class="delete">Delete</button>
+            <button class="done">Done</button>
+        </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const transcript = document.getElementById("transcript");
+
+            // Example entries (this would be dynamically generated in a real application)
+            const entries = [
+                { time: "00:05", text: "What jobs are your friends doing now?" },
+                { time: "00:12", text: "30% of them are working in accountancy firms, 30 to 40% working in exchange banks and joint-stock trade companies, and 30% working in various fields such as journalism or marketing in consumer product companies." },
+                { time: "00:25", text: "I know that your university is one of the best in Vietnam. So graduating from such a good school, what are your advantages and disadvantages when applying for jobs?" }
+            ];
+
+            // Function to display entries one by one
+            function displayEntries(entries) {
+                entries.forEach((entry, index) => {
+                    setTimeout(() => {
+                        const pTime = document.createElement("p");
+                        pTime.className = "timer";
+                        pTime.textContent = entry.time;
+
+                        const pText = document.createElement("p");
+                        pText.className = "question";
+                        pText.textContent = entry.text;
+
+                        transcript.appendChild(pTime);
+                        transcript.appendChild(pText);
+                    }, index * 5000); // Display each entry every 5 seconds
+                });
+            }
+
+            // Start displaying entries
+            displayEntries(entries);
+        });
+    </script>
 </body>
 </html>
