@@ -16,14 +16,14 @@ document.getElementById('user-input').addEventListener('keypress', function (e) 
       // Simulate typing from the chatbot
       setTimeout(() => {
         let botMessage = '';
-        if (userText.toLowerCase() === 'xin') {
+        if (userText.toLowerCase() === 'xin chao') {
           botMessage = 'Ngày hôm nay của bạn thế nào? Bạn cần mình giúp gì không?';
         } else {
           botMessage = 'Đây là file ghi âm bạn vừa tìm. Bạn cứ thoải mái hỏi thêm nếu cần gì nhé~';
           // Call the function to display results
           displayResults();
         }
-        chatBox.innerHTML += `<div class="bot-message">Chatbot: ${botMessage}</div>`;
+        chatBox.innerHTML += `<div class="bot-message">CaRot: ${botMessage}</div>`;
       }, 1000); // Adjust the timeout to simulate slower typing
   
       // Clear input
