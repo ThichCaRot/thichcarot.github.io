@@ -22,7 +22,7 @@
             <button class="transcript">Transcript</button>
         </div>
         <div class="pause-button">
-            <span class="recording-time">00:02.7</span>
+            <span id="recording-time" class="recording-time">00:00.0</span>
             <button class="pause">| |</button>
         </div>
         <div class="action-buttons">
@@ -33,6 +33,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const transcript = document.getElementById("transcript");
+            const recordingTime = document.getElementById("recording-time");
 
             // Example entries (this would be dynamically generated in a real application)
             const entries = [
@@ -55,12 +56,34 @@
 
                         transcript.appendChild(pTime);
                         transcript.appendChild(pText);
-                    }, index * 5000); // Display each entry every 5 seconds
+                    }, index * 7000); // Display each entry every 7 seconds
                 });
+            }
+
+            // Function to update the recording timer
+            function updateTimer() {
+                let startTime = Date.now();
+
+                function incrementTime() {
+                    let elapsedTime = Date.now() - startTime;
+                    let totalSeconds = Math.floor(elapsedTime / 1000);
+                    let minutes = Math.floor(totalSeconds / 60);
+                    let seconds = totalSeconds % 60;
+                    let milliseconds = Math.floor((elapsedTime % 1000) / 100);
+
+                    recordingTime.textContent = 
+                        `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${milliseconds}`;
+                    requestAnimationFrame(incrementTime);
+                }
+
+                incrementTime();
             }
 
             // Start displaying entries
             displayEntries(entries);
+
+            // Start the timer
+            updateTimer();
         });
     </script>
 </body>
