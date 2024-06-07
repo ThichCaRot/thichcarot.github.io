@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to delete a resource item
+        function deleteResource(element) {
+            var resourceItem = element.parentElement;
+            resourceItem.remove();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar with Home icon -->
+        <nav class="navbar">
+            <a href="index.html" class="home-icon">
+                <img src="cloud.ico" alt="Home">
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Resources List -->
+        <div class="resources-list">
+            <div class="resource-item">
+                <h2>New recording 2</h2>
+                <p>Date: 13/05/2024</p>
+                <p>Duration: 31:02</p>
+                <span class="delete-icon" onclick="deleteResource(this)">🗑️</span>
+            </div>
+            <div class="resource-item">
+                <h2>Marketing plan</h2>
+                <p>Date: 11/05/2024</p>
+                <p>Duration: 31:02</p>
+                <span class="delete-icon" onclick="deleteResource(this)">🗑️</span>
+            </div>
+            <!-- Add more resource items as needed -->
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content if needed -->
+    </footer>
+</body>
+</html>
