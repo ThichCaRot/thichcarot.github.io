@@ -16,7 +16,7 @@ document.getElementById('user-input').addEventListener('keypress', function (e) 
       // Simulate typing from the chatbot
       setTimeout(() => {
         let botMessage = '';
-        if (userText.toLowerCase() === 'hello') {
+        if (userText.toLowerCase() === 'xin') {
           botMessage = 'Ngày hôm nay của bạn thế nào? Bạn cần mình giúp gì không?';
         } else {
           botMessage = 'Đây là file ghi âm bạn vừa tìm. Bạn cứ thoải mái hỏi thêm nếu cần gì nhé~';
