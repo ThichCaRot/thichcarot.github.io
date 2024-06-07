@@ -143,8 +143,8 @@ body {
 }
 
 .folder-personal {
-    width: 20%; /* Adjust size as needed */
-    height: 10%; /* Adjust size as needed */
+    width: 200px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
     background-color: #0f3a9e; /* Folder color */
     border: 1px solid #352a29; /* Folder border */
 
