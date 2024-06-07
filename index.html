@@ -1,46 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recorder</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Simulation</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Display folders above WabiSabi -->
-        <h1 class="wabisabi">WabiSabi</h1>
-
-        <div class="folders-display">
-            <div class="folder-personal" onclick="window.location.href='personal.html'">
-                <img src="contacts.ico" alt="Home" class="folder-icon">
-                <span class="folder-name">Personal</span>
-            </div>
-            <div class="folder-work" onclick="window.location.href='work.html'">
-                <img src="links.ico" alt="Work" class="folder-icon">
-                <span class="folder-name">Work</span>
-            </div>
-        </div>
-
-        <!-- Display folders below WabiSabi -->
-        <div class="folders-display">
-            <div class="folder-school" onclick="window.location.href='school.html'">
-                <img src="favorites.ico" alt="School" class="folder-icon">
-                <span class="folder-name">School</span>
-            </div>
-            <div class="folder-business" onclick="window.location.href='business.html'">
-                <img src="games.ico" alt="Personal" class="folder-icon">
-                <span class="folder-name">Business</span>
-            </div>
-        </div>
-    </div>
-    <div class="record-button">
-        <button class="record" onclick="startRecording()">●</button>
-    </div>
-    <script>
-        function startRecording() {
-            window.location.href = 'recording.html';
-        }
-    </script>
+<div id="chat-container">
+  <div id="chat-box">
+    <!-- Chat messages will be displayed here -->
+  </div>
+  <div id="user-input-container">
+    <input type="text" id="user-input" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
