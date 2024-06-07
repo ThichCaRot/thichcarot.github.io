@@ -135,3 +135,47 @@ body {
     font-size: 24px;
     color: black;
 }
+
+.folders-display {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.folder {
+    width: 200px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    background-color: #0f3a9e; /* Folder color */
+    border: 1px solid #ccc; /* Folder border */
+
+    line-height: 100px; /* Vertically center folder name */
+    border-radius: 5px; /* Optional: rounded corners */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Optional: shadow for depth */
+}
+
+/* Add more styling as needed */
+.folder-icon {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin-bottom: 5px; /* Space between icon and folder name */
+    margin-left: 10%;
+    text-align: left;
+}
+
+/* Continue with previous styles */
+
+.folder-name {
+    color: #F4EFEE; /* Make the text transparent */
+/* Create a stroke effect */
+    text-align: center;
+    /* Other styling as needed */
+    font-size: 24px;
+}
+
+.wabisabi {
+    color: #352a29; /* Make the text transparent */
+/* Create a stroke effect */
+    text-align: center;
+    /* Other styling as needed */
+    font-size: 80px;
+}
