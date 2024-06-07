@@ -195,3 +195,41 @@ body {
     /* Other styling as needed */
     font-size: 80px;
 }
+
+/* Styles for the navigation bar */
+.navbar {
+    background-color: #fff; /* Adjust the color as needed */
+    padding: 10px;
+    text-align: left; /* Aligns the home icon to the left */
+}
+
+/* Styles for the resources list */
+.resources-list {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light grey background */
+}
+
+.resource-item {
+    border-bottom: 1px solid #e1e1e1; /* Light grey border for each item */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.resource-item h2 {
+    margin: 0;
+    color: #333; /* Dark grey color for the title */
+}
+
+.resource-item p {
+    margin: 5px 0;
+    color: #666; /* Medium grey color for the details */
+}
+
+/* Add more styles as needed */
+.delete-icon {
+    float: right; /* Position the bin icon to the right */
+    cursor: pointer; /* Change cursor to pointer when hovering over the icon */
+}
+
+/* Add more styles as needed */
