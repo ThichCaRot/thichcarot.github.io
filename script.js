@@ -17,9 +17,9 @@ document.getElementById('user-input').addEventListener('keypress', function (e) 
       setTimeout(() => {
         let botMessage = '';
         if (userText.toLowerCase() === 'hello') {
-          botMessage = 'How are you today? What can I help?';
+          botMessage = 'Ngày hôm nay của bạn thế nào? Bạn cần mình giúp gì không?';
         } else {
-          botMessage = 'Sure, here is what you find:';
+          botMessage = 'Đây là file ghi âm bạn vừa tìm. Bạn cứ thoải mái hỏi thêm nếu cần gì nhé~';
           // Call the function to display results
           displayResults();
         }
